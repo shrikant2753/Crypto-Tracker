@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="header">
         <div class="left">
@@ -16,6 +18,19 @@
             <div id="compare">Compare</div>
             <div id="watchlist">Watchlist</div>
             <div id="dashbord" class="dashbord active-nav">Dashbord</div>
+        </div>
+    </div>
+    <div class="filters">
+        <div class="searchbar">
+            <input type="search" id="searchbar" name="search" placeholder="Search By Name or Symbol">
+        </div>
+        <div class="sort">
+            <div class="mkt-cap" id="sortMktCap">
+                Sort by Mkt Cap
+            </div>
+            <div class="percentage" id="sortPercentage">
+                Sort by Percentage
+            </div>
         </div>
     </div>
 
@@ -67,4 +82,5 @@
     </div>
     <script src="./script.js"></script>
 </body>
+
 </html>

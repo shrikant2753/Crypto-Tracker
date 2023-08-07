@@ -1,16 +1,16 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-body{
-    
+body {
+
     background-color: rgba(12, 12, 12);
     color: aliceblue;
 }
 
 /* header */
-.header{
+.header {
     position: sticky;
     top: 0px;
     z-index: 100;
@@ -21,61 +21,117 @@ body{
     align-items: center;
 }
 
-.left{
+.left {
     padding: 20px 30px;
 }
 
-.right{
+.right {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding: 20px 30px;
     font-size: 18px;
     color: #aaa7a7;
+    gap: 3px;
 }
 
-.right div{
+.right div {
     padding: 5px 20px;
+    border: 2px solid rgba(48, 106, 215, 0.336);
+    border-radius: 20px;
 }
 
-.active-nav{
+.active-nav {
     border: 2px solid rgb(48, 107, 215);
     border-radius: 20px;
     background-color: rgb(48, 107, 215);
     color: white;
 }
 
-.active-nav:hover{
+.active-nav:hover {
     transform: scale(1.03);
 }
 
-.right div:hover{
-    border: 2px solid rgba(48, 106, 215, 0.336);
+.right div:hover {
+    transform: scale(1.03);
+    border: 2px solid rgba(48, 106, 215, 0.636);
     border-radius: 20px;
     background-color: rgba(48, 106, 215, 0.0.336);
     color: white;
 }
 
+/* search bar */
+.filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 200px;
+    position: sticky;
+    top: 64px;
+    padding: 10px 0;
+    background-color: rgba(12, 12, 12);
+    z-index: 10;
+}
+
+.searchbar {
+    display: flex;
+    width: 60%;
+    max-width: 1225px;
+    padding: 12px;
+    align-items: center;
+    gap: 7px;
+    background-color: #b6b0b0;
+}
+
+.searchbar input[type="search"],
+#searchbar::placeholder {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #b6b0b0;
+    color: rgba(40, 38, 38, 0.7);
+}
+
+.sort {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.sort div {
+    text-align: center;
+    padding: 10px 30px;
+    border: 2px solid rgba(48, 106, 215, 0.336);
+    cursor: pointer;
+}
+
+.sort div:hover{
+    color: white;
+    transform: scale(1.02);
+    border: 2px solid rgba(48, 106, 215, 0.636);
+}
 
 
 /* main container */
-.main-container{
+.main-container {
     display: flex;
     flex-direction: column;
 }
 
-.top{
+.top {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 10px 0px 30px 0px;
     position: sticky;
-    top: 50px;
+    top: 120px;
     background-color: rgba(12, 12, 12);
     z-index: 10;
 }
 
-#top-grid{
+#top-grid {
     /* border: 2px solid blue; */
     width: 100%;
     text-align: center;
@@ -85,11 +141,11 @@ body{
     cursor: pointer;
 }
 
-#top-grid.active{
-    border-bottom:2px solid rgb(48, 107, 215);
+#top-grid.active {
+    border-bottom: 2px solid rgb(48, 107, 215);
 }
 
-#top-list{
+#top-list {
     width: 100%;
     text-align: center;
     padding: 10px 0px;
@@ -99,21 +155,21 @@ body{
     cursor: pointer;
 }
 
-#top-list.active{
-    border-bottom:2px solid rgb(48, 107, 215);
-    
+#top-list.active {
+    border-bottom: 2px solid rgb(48, 107, 215);
+
 }
 
 
 /* grid container */
-.grid-container{
+.grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
     margin: 0px 200px;
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
     border: 2px solid #1b1b1b;
@@ -125,11 +181,11 @@ body{
     transform-origin: center;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.05);
 }
 
-.crypto-info{
+.crypto-info {
     display: flex;
     flex-direction: row;
     gap: 15px;
@@ -137,45 +193,48 @@ body{
     padding-bottom: 10px;
 }
 
-.crypto-info .name, .total-volume, .market-cap{
+.crypto-info .name,
+.total-volume,
+.market-cap {
     color: #6f6f6f;
 }
 
-.crypto-info .profile img{
+.crypto-info .profile img {
     width: 48px;
     height: 48px;
 }
 
-.price-change{
+.price-change {
     border: 3px solid rgb(22, 151, 22, 0.94);
     border-radius: 20px;
     padding: 4px 18px;
     width: fit-content;
 }
 
-.price-change.negative{
+.price-change.negative {
     border: 3px solid rgb(218, 14, 14, 0.8);
     border-radius: 20px;
     padding: 4px 18px;
     width: fit-content;
 }
 
-.c-price, .info .id{
+.c-price,
+.info .id {
     font-size: 18px;
     font-weight: 500;
 }
 
-.c-price{
+.c-price {
     padding-top: 10px;
     color: rgb(22, 151, 22, .94);
 }
 
-.c-price.negative{
+.c-price.negative {
     padding-top: 10px;
     color: rgba(218, 14, 14, 0.821);
 }
 
-.card .prices{
+.card .prices {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -185,70 +244,96 @@ body{
 
 /* list container */
 
-.list-container{
+.list-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin: 0px 200px;
 }
 
-.list-format{
+.list-format {
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
     padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
-    transition: box-shadow 0.3s, transform 0.3s; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
 }
 
-.list-format:hover{
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+.list-format:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     transform: scale(1.03);
 }
 
-.list-format > * {
+.list-format>* {
     flex: 1;
     display: inline-flex;
-  }
+}
 
 
 @media screen and (min-width : 1100px) {
-    #grid{
+    #grid {
         grid-template-columns: repeat(4, 1fr);
         margin: 0px 200px;
     }
-    #list{
+
+    #list {
         margin: 0px 200px;
     }
 }
 
-@media screen and (min-width: 700px) and (max-width: 1100px){
-    #grid{
+@media screen and (min-width: 800px) and (max-width: 1100px) {
+    #grid {
         grid-template-columns: repeat(4, 1fr);
+        margin: 0px 0px;
+    }
+
+    #list {
         margin: 0px 100px;
     }
-    #list{
+
+    .filters{
         margin: 0px 100px;
+        gap: 20px;
     }
 }
 
-@media screen and (max-width : 700px) {
-    #grid{
+@media screen and (max-width : 800px) {
+    #grid {
         grid-template-columns: repeat(2, 1fr);
         margin: 0px 30px;
     }
-    #list{
+
+    #list {
         margin: 0px 30px;
+    }
+    .filters{
+        margin: 0px 30px;
+        gap: 20px;
+    }
+    .header .right{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width : 556px) {
-    #grid{
+    #grid {
         grid-template-columns: repeat(1, 1fr);
     }
-    #list{
+
+    #list {
         margin: 0px 0px;
+    }
+
+    .filters{
+        margin: 0px 0px;
+        gap: 20px;
+    }
+    .header .right{
+        display: flex;
+        flex-direction: column;
     }
 }
